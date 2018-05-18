@@ -24,7 +24,8 @@ public interface GenericManager<T extends BaseEntity, PK extends Serializable> {
 
 	
 	public List<T> save(Iterable<T> entities);
-
 	
 	public void delete(PK id);
+
+
 }

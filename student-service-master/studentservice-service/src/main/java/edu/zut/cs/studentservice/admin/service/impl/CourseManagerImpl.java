@@ -1,5 +1,7 @@
 package edu.zut.cs.studentservice.admin.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,5 +16,9 @@ public class CourseManagerImpl extends GenericManagerImpl<Course, Long>implement
 	public void setCourseDao(CourseDao courseDao) {
 		this.courseDao = courseDao;
 		this.dao=this.courseDao;
+	}
+	@Override
+	public List<Course> findBySpeciality(String speciality) {
+		return this.findBySpeciality(speciality);
 	}
 }

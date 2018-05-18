@@ -43,4 +43,5 @@ public class GenericManagerImpl<T extends BaseEntity, PK extends Serializable>
 		this.dao.deleteById(id);
 	}
 
+
 }
