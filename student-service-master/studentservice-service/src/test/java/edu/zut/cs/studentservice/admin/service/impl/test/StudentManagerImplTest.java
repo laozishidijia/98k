@@ -1,5 +1,7 @@
 package edu.zut.cs.studentservice.admin.service.impl.test;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,5 +22,10 @@ public class StudentManagerImplTest extends GenericGenerator{
 			student.setS_dept("计算机");
 			this.studentManager.save(student);
 		}
+	}
+	@Test
+	public void TestFindBySdept() {
+		List<Student> studentList = studentManager.findByNames("小红0");
+		System.out.println("总共有"+studentList.size()+"个叫小红0的学生");
 	}
 }

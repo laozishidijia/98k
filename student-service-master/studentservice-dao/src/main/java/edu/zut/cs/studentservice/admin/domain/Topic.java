@@ -21,6 +21,11 @@ public class Topic extends BaseEntity{
 	public String getT_id() {
 		return T_id;
 	}
+	@Override
+	public String toString() {
+		return "Topic [T_id=" + T_id + ", title=" + title + ", content=" + content + ", type=" + type + ", author="
+				+ author + "]";
+	}
 	public void setT_id(String t_id) {
 		T_id = t_id;
 	}
