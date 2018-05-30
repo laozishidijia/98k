@@ -5,7 +5,28 @@
     <artifactId>student-service-master</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>studentservice-web</groupId>
   <artifactId>studentservice-web</artifactId>
   <packaging>war</packaging>
+  <dependencies>
+		<dependency>
+			<groupId>StudentService</groupId>
+			<artifactId>studentservice-base</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>StudentService</groupId>
+			<artifactId>studentservice-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>StudentService</groupId>
+			<artifactId>studentservice-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		 <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+	</dependencies>
 </project>

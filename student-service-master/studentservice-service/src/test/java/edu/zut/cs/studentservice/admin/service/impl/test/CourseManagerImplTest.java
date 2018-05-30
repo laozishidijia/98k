@@ -9,20 +9,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.studentservice.admin.domain.Course;
-import edu.zut.cs.studentservice.admin.service.impl.CourseManagerImpl;
+import edu.zut.cs.studentservice.admin.service.CourseManager;
 import edu.zut.cs.studentservice.base.service.GenericGenerator;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 public class CourseManagerImplTest extends GenericGenerator {
+	@Autowired
+	CourseManager courseManager;
 	@Test
 	public void findTest()
 	{
-		CourseManagerImpl courseManagerImpl=new CourseManagerImpl();
-		List<Course> courses=courseManagerImpl.getCourseDao().findBySpeciality("软件工程");
+		List<Course> courses=this.courseManager.findBySpeciality("软件工程");
 		System.out.println(courses.size());
 	}
 	

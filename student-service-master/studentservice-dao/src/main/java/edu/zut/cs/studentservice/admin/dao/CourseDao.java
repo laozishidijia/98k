@@ -7,4 +7,6 @@ import edu.zut.cs.studentservice.base.dao.GenericDao;
 
 public interface CourseDao extends GenericDao<Course,Long>{
 	public  List<Course> findBySpeciality(String speciality);
+
+
 }

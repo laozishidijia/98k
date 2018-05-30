@@ -10,6 +10,7 @@
   	<module>studentservice-service</module>
   	<module>studentservice-web</module>
   	<module>studentservice-client</module>
+  	<module>student-service-web</module>
   </modules>
   <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

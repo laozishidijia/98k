@@ -109,5 +109,12 @@ public class Course extends BaseEntity{
 		this.student = student;
 	}
 
+	@Override
+	public String toString() {
+		return "Course [speciality=" + speciality + ", monday=" + monday + ", tuesday=" + tuesday + ", wednesday="
+				+ wednesday + ", thursday=" + thursday + ", friday=" + friday + ", saturday=" + saturday + ", sunday="
+				+ sunday + ", student_class=" + student_class + ", student=" + student + "]";
+	}
+
 
 }
