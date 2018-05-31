@@ -1,5 +1,7 @@
 package edu.zut.cs.studentservice.admin;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +22,9 @@ public class CourseController extends GenericController<Course,Long,CourseManage
 	@RequestMapping("/showcourse")
 	public String showCourse(Student student)
 	{
-		System.out.println(student);
+		String speciality=student.getS_dept();
+		List<Course> results=this.courseManager.findBySpeciality(speciality);
+		System.out.println(results.size());
 		return "course";
 	}
 }
