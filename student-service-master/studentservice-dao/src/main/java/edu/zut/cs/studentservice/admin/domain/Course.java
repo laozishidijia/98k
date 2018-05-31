@@ -27,7 +27,6 @@ public class Course extends BaseEntity{
 	String sunday;
 	@Column(name="CLASS")
 	String student_class;
-	Student student;
 	
 	public String getStudent_class() {
 		return student_class;
@@ -101,20 +100,14 @@ public class Course extends BaseEntity{
 		this.sunday = sunday;
 	}
 
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
 	@Override
 	public String toString() {
 		return "Course [speciality=" + speciality + ", monday=" + monday + ", tuesday=" + tuesday + ", wednesday="
 				+ wednesday + ", thursday=" + thursday + ", friday=" + friday + ", saturday=" + saturday + ", sunday="
-				+ sunday + ", student_class=" + student_class + ", student=" + student + "]";
+				+ sunday + ", student_class=" + student_class + "]";
 	}
+
+
 
 
 }

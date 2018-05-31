@@ -1,6 +1,5 @@
 package edu.zut.cs.studentservice.admin;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,8 +22,10 @@ public class CourseController extends GenericController<Course,Long,CourseManage
 	public String showCourse(Student student)
 	{
 		String speciality=student.getS_dept();
-		List<Course> results=this.courseManager.findBySpeciality(speciality);
-		System.out.println(results.size());
+		//List<Course> results=this.courseManager.findBySpeciality(speciality);
+		//System.out.println(results.size());
+		Course course=this.courseManager.findByStudent_class(student.getS_class());
+		System.out.println(course);
 		return "course";
 	}
 }

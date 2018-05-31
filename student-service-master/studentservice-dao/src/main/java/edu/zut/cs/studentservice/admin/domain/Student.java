@@ -13,7 +13,8 @@ public class Student extends BaseEntity {
 	private String S_id;
 	private String S_name;
 	private String S_dept;
-	
+	@Column(name="S_class")
+	private String S_class;
 	@Column(name="S_ID")
 	public String getS_id() {
 		return S_id;
@@ -35,10 +36,16 @@ public class Student extends BaseEntity {
 	public void setS_dept(String s_dept) {
 		S_dept = s_dept;
 	}
+	
+	public String getS_class() {
+		return S_class;
+	}
+	public void setS_class(String s_class) {
+		S_class = s_class;
+	}
 	@Override
 	public String toString() {
-		return "Student [S_id=" + S_id + ", S_name=" + S_name + ", S_dept=" + S_dept + "]";
+		return "Student [S_id=" + S_id + ", S_name=" + S_name + ", S_dept=" + S_dept + ", S_class=" + S_class + "]";
 	}
 
-	
 }
