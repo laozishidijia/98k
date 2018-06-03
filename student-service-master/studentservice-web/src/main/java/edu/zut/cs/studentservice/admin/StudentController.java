@@ -23,7 +23,4 @@ public class StudentController extends GenericController<Student,Long,StudentMan
 		this.studentManager = studentManager;
 		this.manager =this.studentManager;
 	}
-	
-	
-
 }
