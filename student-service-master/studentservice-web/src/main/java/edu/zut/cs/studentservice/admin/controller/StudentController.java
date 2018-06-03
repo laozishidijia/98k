@@ -1,4 +1,4 @@
-package edu.zut.cs.studentservice.admin;
+package edu.zut.cs.studentservice.admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

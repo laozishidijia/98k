@@ -1,4 +1,4 @@
-package edu.zut.cs.studentservice.admin;
+package edu.zut.cs.studentservice.admin.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +26,6 @@ public class CourseController extends GenericController<Course,Long,CourseManage
 		//System.out.println(results.size());
 		Course course=this.courseManager.findByStudent_class(student.getS_class());
 		System.out.println(course);
-		return "course";
+		return "/course/course";
 	}
 }
