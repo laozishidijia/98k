@@ -1,9 +1,9 @@
 Ext.define('student.view.student.StudentList' ,{
     extend: 'Ext.grid.Panel',
     alias: 'widget.StudentList',
-
     title: 'All Students',
-
+    store:'studentStore',
+    
     initComponent: function() {
         this.store = {
             fields: ['sdept', 'sid','sname'],
