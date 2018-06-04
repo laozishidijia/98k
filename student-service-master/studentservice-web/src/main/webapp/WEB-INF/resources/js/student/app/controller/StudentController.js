@@ -1,26 +1,28 @@
 Ext.define('student.controller.StudentController', {
 	extend : 'Ext.app.Controller',
 	views : [ 'student.StudentList', 'student.Edit' ],
-	stores:['studentStore'],
-	models:['student'],
+	stores : [ 'studentStore' ],
+	models : [ 'studentModel' ],
 	init : function() {
 		this.control({
 			'viewport > panel' : {
-				itemdblclick:this.studentEdit
+				itemdblclick : this.studentEdit
 			},
-			'studentEdit button[action=save]':{
-				click:this.updateStudent
+			'studentEdit button[action=save]' : {
+				click : this.updateStudent
 			}
 		});
 	},
-	updateStudent:function(button){
-		console.log('clicked  the save button')
+	updateStudent : function(button) {
+		var win = button.up('window'), 
+			form = win.down('form'),
+			record = form.getRecord(), 
+			values = form.getValues();
+		record.set(values);
+		win.close();
 	},
-	editUser : function(grid, record) {
+	studentEdit : function(grid, record) {
 		var view = Ext.widget('studentEdit');
 		view.down('form').loadRecord(record);
-	},
-	onPanelRendered : function() {
-		console.log('The panel was rendered');
 	}
 });
