@@ -41,7 +41,7 @@
           p:dataSource-ref="dataSource" p:persistenceUnitName="ApplicationEntityManager">
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
         <property name="jpaDialect" ref="jpaDialect"/>
-        <property name="packagesToScan" value="edu.zut.cs.software.*"/>
+        <property name="packagesToScan" value="edu.zut.cs.studentservice.*"/>
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>

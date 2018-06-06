@@ -1,11 +1,9 @@
-Ext.define('student.view.student.Edit', {
+Ext.define('ssv.view.Edit', {
     extend: 'Ext.window.Window',
     alias: 'widget.studentEdit',
-
-    title: 'Edit Student',
+    title: '编辑学生信息',
     layout: 'fit',
     autoShow: true,
-
     initComponent: function() {
         this.items = [
             {
@@ -32,11 +30,11 @@ Ext.define('student.view.student.Edit', {
 
         this.buttons = [
             {
-                text: 'Save',
+                text: '保存',
                 action: 'save'
             },
             {
-                text: 'Cancel',
+                text: '取消',
                 scope: this,
                 handler: this.close
             }

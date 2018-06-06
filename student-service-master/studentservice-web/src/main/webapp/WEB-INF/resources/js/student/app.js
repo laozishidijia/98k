@@ -1,14 +1,14 @@
 Ext.application({
 	requires:['Ext.container.Viewport'],
-	name : 'student',
-	appFolder : 'app',
-	controllers : ['StudentController'],
+	name : 'ssv',
+	appFolder : server_context + '/resources/js/student/app',
+	controllers : [ 'StudentController' ],
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 			layout : 'fit',
-			items : {
-				xtype : 'StudentList',
-			}
+			items : [ {
+				xtype : 'StudentGrid'
+			} ]
 		});
 	}
 });
