@@ -1,29 +1,29 @@
-Ext.define('ssv.controller.StudentController', {
+Ext.define('student.controller.StudentController', {
 	extend : 'Ext.app.Controller',
-	views : [ 'StudentGrid', 'Edit' ],
-	stores:['studentStore'],
-	models:['studentModel'],
+	alias : 'widget.studentController',
+	stores : [ 'StudentStore' ],
+	models : [ 'StudentModel' ],
+	views : [ 'StudentGrid', 'StudentEdit' ],
 	init : function() {
 		this.control({
-			'viewport > StudentGrid' : {
-				itemdblclick:this.Edit
+			'studentGrid' : {
+				itemdblclick : this.editStudent
 			},
-			'studentEdit button[action=save]':{
-				click:this.updateStudent
+			'studentEdit button[action=save]' : {
+				click : this.updateStudent
 			}
 		});
 	},
-	updateStudent:function(button){
+	editStudent : function(grid, record) {
+		var view = Ext.widget('studentEdit');
+		view.down('form').loadRecord(record);
+	},
+	updateStudent : function(button) {
 		var win = button.up('window');
 		form = win.down('form');
 		record = form.getRecord();
 		values = form.getValues();
 		record.set(values);
 		win.close();
-	},
-	studentEdit : function(grid, record) {
-		var view = Ext.widget('studentEdit');
-		view.down('form').loadRecord(record);
 	}
-	
 });

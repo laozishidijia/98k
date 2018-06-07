@@ -13,9 +13,7 @@ public class Student extends BaseEntity {
 	private String S_id;
 	private String S_name;
 	private String S_dept;
-	@Column(name="S_class")
 	private String S_class;
-	@Column(name="S_ID")
 	public String getS_id() {
 		return S_id;
 	}

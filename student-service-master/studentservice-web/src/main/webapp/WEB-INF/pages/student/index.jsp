@@ -25,6 +25,5 @@
 <script type="text/javascript"
 	src="${pageContext.request.contextPath}/resources/js/student/app.js"></script>
 <body>
-
 </body>
 </html>
