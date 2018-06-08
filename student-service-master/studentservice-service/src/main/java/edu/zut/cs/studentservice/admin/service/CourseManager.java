@@ -8,5 +8,5 @@ import edu.zut.cs.studentservice.base.service.GenericManager;
 public interface CourseManager extends GenericManager<Course, Long>{
 	public  List<Course> findBySpeciality(String speciality);
 
-	public Course findByStudent_class(String student_class);
+	public Course findByClazz(String clazz);
 }

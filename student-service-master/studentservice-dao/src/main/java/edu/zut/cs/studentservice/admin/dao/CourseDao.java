@@ -9,7 +9,7 @@ import edu.zut.cs.studentservice.base.dao.GenericDao;
 
 public interface CourseDao extends GenericDao<Course,Long>{
 	public  List<Course> findBySpeciality(String speciality);
-	@Query("select course from Course course where course.student_class like %?1%")
-	public Course findByStudent_class(String student_class);
+	@Query("select course from Course course where course.clazz like %?1%")
+	public Course findByClazz(String clazz);
 
 }

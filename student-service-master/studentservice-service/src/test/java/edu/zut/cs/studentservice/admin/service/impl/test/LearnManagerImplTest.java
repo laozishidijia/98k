@@ -4,9 +4,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import edu.zut.cs.studentservice.admin.domain.Learn;
-import edu.zut.cs.studentservice.admin.domain.Student;
 import edu.zut.cs.studentservice.admin.service.LearnManager;
-import edu.zut.cs.studentservice.admin.service.StudentManager;
 import edu.zut.cs.studentservice.base.service.GenericGenerator;
 
 public class LearnManagerImplTest extends GenericGenerator {

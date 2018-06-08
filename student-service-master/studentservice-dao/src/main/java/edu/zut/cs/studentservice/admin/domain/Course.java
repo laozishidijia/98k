@@ -25,15 +25,21 @@ public class Course extends BaseEntity{
 	String saturday;
 	@Column(name="SUNDAY",columnDefinition="LONGTEXT")
 	String sunday;
-	@Column(name="CLASS")
-	String student_class;
+	@Column(name="CLAZZ")
+	String clazz;
 	
-	public String getStudent_class() {
-		return student_class;
+
+
+	public String getClazz() {
+		return clazz;
 	}
 
-	public void setStudent_class(String student_class) {
-		this.student_class = student_class;
+	public void setClazz(String clazz) {
+		this.clazz = clazz;
+	}
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
 	}
 
 	public String getSpeciality() {
@@ -104,8 +110,10 @@ public class Course extends BaseEntity{
 	public String toString() {
 		return "Course [speciality=" + speciality + ", monday=" + monday + ", tuesday=" + tuesday + ", wednesday="
 				+ wednesday + ", thursday=" + thursday + ", friday=" + friday + ", saturday=" + saturday + ", sunday="
-				+ sunday + ", student_class=" + student_class + "]";
+				+ sunday + ", clazz=" + clazz + "]";
 	}
+
+
 
 
 

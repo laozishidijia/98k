@@ -31,8 +31,8 @@ public class CourseManagerImpl extends GenericManagerImpl<Course, Long> implemen
 	}
 
 	@Override
-	public Course findByStudent_class(String student_class) {
-		Course course=this.courseDao.findByStudent_class(student_class);
+	public Course findByClazz(String clazz) {
+		Course course=this.courseDao.findByClazz(clazz);
 		return course;
 	}
 }

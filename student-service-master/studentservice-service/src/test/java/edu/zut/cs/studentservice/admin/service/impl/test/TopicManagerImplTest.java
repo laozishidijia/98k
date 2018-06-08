@@ -4,12 +4,10 @@ import java.util.List;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.zut.cs.studentservice.admin.domain.Course;
 import edu.zut.cs.studentservice.admin.domain.Student;
 import edu.zut.cs.studentservice.admin.domain.Topic;
 import edu.zut.cs.studentservice.admin.service.StudentManager;
 import edu.zut.cs.studentservice.admin.service.TopicManager;
-import edu.zut.cs.studentservice.admin.service.impl.TopicManagerImpl;
 import edu.zut.cs.studentservice.base.service.GenericGenerator;
 
 public class TopicManagerImplTest extends GenericGenerator{
