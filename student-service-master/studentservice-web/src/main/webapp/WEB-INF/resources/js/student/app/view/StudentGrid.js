@@ -1,7 +1,6 @@
 var pageSize = 20;
 
 var studentStore = Ext.create('student.store.StudentStore');
-
 Ext.define('student.view.StudentGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.studentGrid',
@@ -16,22 +15,22 @@ Ext.define('student.view.StudentGrid', {
 		text : "学号",
 		width : 120,
 		sortable : true,
-		dataIndex : 'S_id'
+		dataIndex : 's_id'
 	}, {
 		text : "姓名",
 		width : 80,
 		sortable : true,
-		dataIndex : 'S_name'
+		dataIndex : 's_name'
 	}, {
 		text : "专业",
 		width : 80,
 		sortable : true,
-		dataIndex : 'S_dept'
+		dataIndex : 's_dept'
 	}, {
 		text : " 班级",
 		width : 80,
 		sortable : true,
-		dataIndex : 'S_class'
+		dataIndex : 's_class'
 	}, {
 		text : "添加时间",
 		width : 150,

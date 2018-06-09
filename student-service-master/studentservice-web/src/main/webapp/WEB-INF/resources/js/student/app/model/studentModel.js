@@ -6,19 +6,19 @@ Ext.define('student.model.StudentModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'S_id',
+		name : 's_id',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'S_name',
+		name : 's_name',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'S_dept',
+		name : 's_dept',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'S_class',
+		name : 's_class',
 		type : 'string',
 		sortable : true
 	},{
