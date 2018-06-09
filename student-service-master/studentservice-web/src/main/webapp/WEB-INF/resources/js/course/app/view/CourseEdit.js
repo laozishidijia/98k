@@ -10,7 +10,15 @@ Ext.define('course.view.courseEdit', {
 			height : 300,
 			width : 300,
 			border : false,
-			items : [ {
+			items : [{
+				xtype : 'textfield',
+				name : 'speciality',
+				fieldLabel : '专业'
+			}, {
+				xtype : 'textfield',
+				name : 'clazz',
+				fieldLabel : '班级'
+			},{
 				xtype : 'textfield',
 				name : 'monday',
 				fieldLabel : '周一'
@@ -20,11 +28,11 @@ Ext.define('course.view.courseEdit', {
 				fieldLabel : '周二'
 			}, {
 				xtype : 'textfield',
-				name : 'thursday',
+				name : 'wednesday',
 				fieldLabel : '周三'
 			}, {
 				xtype : 'textfield',
-				name : 'wednesday',
+				name : 'thursday',
 				fieldLabel : '周四'
 			}, {
 				xtype : 'textfield',
