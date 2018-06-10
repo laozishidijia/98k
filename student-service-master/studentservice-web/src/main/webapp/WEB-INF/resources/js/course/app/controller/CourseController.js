@@ -3,7 +3,7 @@ Ext.define('course.controller.CourseController', {
 	alias : 'widget.courseController',
 	stores : [ 'CourseStore' ],
 	models : [ 'CourseModel' ],
-	views : [ 'CourseGrid'],
+	views : [ 'CourseGrid', 'CourseEdit' ],
 	init : function() {
 		this.control({
 			'courseGrid' : {

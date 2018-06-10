@@ -1,7 +1,7 @@
-Ext.define('course.view.courseEdit', {
+Ext.define('course.view.CourseEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.courseEdit',
-	title : '编辑课程表信息',
+	title : '编辑学生信息',
 	layout : 'fit',
 	autoShow : true,
 	initComponent : function() {
@@ -18,35 +18,36 @@ Ext.define('course.view.courseEdit', {
 				xtype : 'textfield',
 				name : 'clazz',
 				fieldLabel : '班级'
-			},{
+			}, {
 				xtype : 'textfield',
 				name : 'monday',
 				fieldLabel : '周一'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'tuesday',
 				fieldLabel : '周二'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'wednesday',
 				fieldLabel : '周三'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'thursday',
 				fieldLabel : '周四'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'friday',
 				fieldLabel : '周五'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'saturday',
 				fieldLabel : '周六'
-			}, {
+			},{
 				xtype : 'textfield',
 				name : 'sunday',
 				fieldLabel : '周日'
-			} ]
+			}
+			]
 		} ];
 		this.buttons = [ {
 			text : '保存',
