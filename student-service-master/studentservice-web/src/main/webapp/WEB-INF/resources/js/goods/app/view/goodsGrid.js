@@ -1,6 +1,6 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('goods.store.GoodsStore');
+var goodsStore = Ext.create('goods.store.GoodsStore');
 Ext.define('goods.view.GoodsGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.goodsGrid',
