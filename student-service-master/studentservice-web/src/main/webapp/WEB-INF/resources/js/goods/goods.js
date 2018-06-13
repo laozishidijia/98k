@@ -1,6 +1,3 @@
-/**
- * 
- */
 Ext.require(['Ext.data*','Ext.grid*']);
 Ext.define('goods.GoodsModel', {
 	extend : 'Ext.data.Model',
@@ -8,23 +5,19 @@ Ext.define('goods.GoodsModel', {
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'code',
+		name : 'Itemsdescribe',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'fullName',
+		name : 'itemsid',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'number',
+		name : 'itemsname',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'describe',
-		type : 'string',
-		sortable : true
-	}, {
-		name : 'price',
+		name : 'itemsnumber',
 		type : 'string',
 		sortable : true
 	}, {
@@ -98,7 +91,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 });
 
 var studentGrid = new Ext.grid.GridPanel({
-	id : 'studentGrid',
+	id : 'goodsGrid',
 	plugins : [rowEditing],
 	store : store,
 	region : 'center',
@@ -113,41 +106,35 @@ var studentGrid = new Ext.grid.GridPanel({
 				sortable : true,
 				dataIndex : 'id'
 			}, {
-				text : "序号",
+				text : "物品描述",
 				width : 120,
 				sortable : true,
-				dataIndex : 'code',
+				dataIndex : 'Itemsdescribe',
 				editor : textFieldEditor,
 				field : {
 					xtype : 'textfield'
 				}
 			}, {
-				text : "物品名",
+				text : "编号",
 				width : 80,
 				sortable : true,
-				dataIndex : 'fullName',
+				dataIndex : 'itemsid',
 				editor : textFieldEditor,
 				field : {
 					xtype : 'textfield'
 				}
+			}, {
+				text : "名称",
+				width : 50,
+				sortable : true,
+				dataIndex : 'itemsname',
+				editor : genderFieldEditor
 			}, {
 				text : "数量",
 				width : 50,
 				sortable : true,
-				dataIndex : 'gender',
-				editor : genderFieldEditor
-			}, {
-				text : "描述",
-				width : 50,
-				sortable : true,
 				editor : textFieldEditor,
-				dataIndex : 'grade'
-			}, {
-				text : "价格",
-				width : 80,
-				sortable : true,
-				editor : textFieldEditor,
-				dataIndex : 'clazz'
+				dataIndex : 'itemsnumber'
 			}, {
 				text : "添加时间",
 				width : 150,
@@ -219,15 +206,15 @@ var goodsForm = new Ext.form.FormPanel({
 	items : [{
 				fieldLabel : "序号",
 				xtype : 'textfield',
-				name : 'code'
+				name : 'itemsid'
 			}, {
 				fieldLabel : "物品名",
 				xtype : 'textfield',
-				name : 'name'
+				name : 'itemsname'
 			}, {
-				fieldLabel : "价格",
+				fieldLabel : "数量",
 				xtype : 'textfield',
-				name : 'gender'
+				name : 'itemsnumber'
 			}],
 	buttons : [{
 				xtype : 'button',
