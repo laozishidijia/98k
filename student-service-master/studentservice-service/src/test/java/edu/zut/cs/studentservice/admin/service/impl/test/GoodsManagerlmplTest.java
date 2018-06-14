@@ -21,7 +21,7 @@ public class GoodsManagerlmplTest extends GenericGenerator{
 			goods.setItemsId("1"+i);
 			goods.setItemsName("物品"+i);
 			goods.setItemsNumber("2"+i);
-			goods.setItemsDescrib("very new");
+			goods.setItemsDescrib("very new"+i+5);
 			this.goodsManager.save(goods);
 		}
 	}

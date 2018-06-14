@@ -12,20 +12,20 @@ Ext.define('goods.view.GoodsEdit', {
 			border : false,
 			items : [{
 				xtype : 'textfield',
-				name : 's_id',
-				fieldLabel : '序号'
+				name : 'Itemsdescribe',
+				fieldLabel : '物品描述'
 			}, {
 				xtype : 'textfield',
-				name : 's_name',
+				name : 'itemsid',
+				fieldLabel : '编号'
+			}, {
+				xtype : 'textfield',
+				name : 'itemsname',
 				fieldLabel : '名称'
-			}, {
-				xtype : 'textfield',
-				name : 's_dept',
-				fieldLabel : '描述'
 			},
 			{
 				xtype : 'textfield',
-				name : 's_class',
+				name : 'itemsnumber',
 				fieldLabel : '数量'
 			}
 			]

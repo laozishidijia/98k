@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.studentservice.base.domain.BaseEntity;
 
-@Table(name = "STUDENTSERVICE_STUDENT")
+@Table(name = "STUDENTSERVICE_GOODS")
 @Entity
 public class Goods extends BaseEntity {
 	

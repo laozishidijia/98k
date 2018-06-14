@@ -1,27 +1,26 @@
 Ext.define('goods.model.GoodsModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.goodsModel',
-	fields : [ {
-		name : 'id',
+	fields : [{name : 'id',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'g_id',
+		name : 'Itemsdescribe',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'g_name',
+		name : 'itemsid',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'g_describe',
+		name : 'itemsname',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'g_number',
+		name : 'itemsnumber',
 		type : 'string',
 		sortable : true
-	},{
+	}, {
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',
@@ -31,5 +30,5 @@ Ext.define('goods.model.GoodsModel', {
 		type : 'date',
 		dateFormat : 'time',
 		sortable : true
-	} ]
-});
+	}]
+	});
