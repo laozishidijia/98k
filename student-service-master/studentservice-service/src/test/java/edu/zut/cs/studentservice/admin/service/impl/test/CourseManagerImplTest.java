@@ -21,13 +21,14 @@ import jxl.read.biff.BiffException;
 public class CourseManagerImplTest extends GenericGenerator {
 	@Autowired
 	CourseManager courseManager;
+	@Test
 	public void findTest()
 	{
-		List<Course> courses=this.courseManager.findBySpeciality("软件工程");
-		System.out.println(courses.size());
+		Course course=this.courseManager.findByClazz("软件161");
+		System.out.println(course.toString());
 	}
 	
-	@Test
+	
 	public void addCourse() throws InterruptedException
 	{
 		File file=new File("G:\\Java\\ServerFiles\\17182\\17182.xls");
