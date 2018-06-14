@@ -1,24 +1,27 @@
-Ext.define('student.model.StudentModel', {
+/**
+ * 
+ */
+Ext.define('infomation.model.InfomationtModel', {
 	extend : 'Ext.data.Model',
-	alias : 'widget.studentModel',
+	alias : 'widget.infomationModel',
 	fields : [ {
 		name : 'id',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 's_id',
+		name : 'info_id',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 's_name',
+		name : 'info_name',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 's_dept',
+		name : 'info_time',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 's_class',
+		name : 'info_message',
 		type : 'string',
 		sortable : true
 	},{
