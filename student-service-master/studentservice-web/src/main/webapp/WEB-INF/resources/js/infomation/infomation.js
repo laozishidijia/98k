@@ -236,6 +236,7 @@ var studentForm = new Ext.form.FormPanel({
 						handler : clearForm,
 						scope : this
 					}]
+
 		})
 Ext.application({
 			name : '反馈信息',

@@ -25,6 +25,7 @@ Ext.define('infomation.store.InfomationStore', {
 			type : 'json'
 		}
 	},
+	
 	// 每页显示的记录行数
 	pageSize : pageSize
 });

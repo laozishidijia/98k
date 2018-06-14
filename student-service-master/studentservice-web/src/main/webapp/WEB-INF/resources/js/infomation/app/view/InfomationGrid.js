@@ -66,4 +66,5 @@ Ext.define('infomation.view.InfomationGrid', {
 		displayMsg : '记录数：第{0}条 - 第{1}条，共 {2}条',
 		emptyMsg : "没有记录"
 	})
+	
 });

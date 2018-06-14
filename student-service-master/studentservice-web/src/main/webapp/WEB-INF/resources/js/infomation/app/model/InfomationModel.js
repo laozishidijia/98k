@@ -35,4 +35,5 @@ Ext.define('infomation.model.InfomationtModel', {
 		dateFormat : 'time',
 		sortable : true
 	} ]
+
 });

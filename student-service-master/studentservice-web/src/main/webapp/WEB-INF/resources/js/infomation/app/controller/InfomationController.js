@@ -29,4 +29,5 @@ Ext.define('infomation.controller.InfomationController', {
 		record.set(values);
 		win.close();
 	}
+	
 });

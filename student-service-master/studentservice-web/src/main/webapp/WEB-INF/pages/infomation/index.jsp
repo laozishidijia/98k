@@ -22,6 +22,5 @@
 	src="${pageContext.request.contextPath}/resources/js/course/app.js"></script>
 
 <body>
-
 </body>
 </html>

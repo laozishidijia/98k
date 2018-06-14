@@ -43,4 +43,5 @@ Ext.define('infomation.view.InfomationEdit', {
 		} ];
 		this.callParent(arguments);
 	}
+
 });

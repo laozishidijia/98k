@@ -16,4 +16,5 @@ Ext.application({
 			} ]
 		});
 	}
+
 });
