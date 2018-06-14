@@ -1,17 +1,17 @@
 var pageSize = 20;
 
-Ext.define('student.store.StudentStore', {
+Ext.define('learn.store.learnStore', {
 	extend : 'Ext.data.Store',
-	alias : 'widget.studentStore',
+	alias : 'widget.learnStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'student.model.StudentModel',
+	model : 'learn.model.learnModel',
 	proxy : {
-		url : server_context + '/student/.json',
+		url : server_context + '/learn/.json',
 		type : 'ajax',
 		api : {
-			read : server_context + '/student/.json',
-			update : server_context + '/student/.json'
+			read : server_context + '/learn/.json',
+			update : server_context + '/learn/.json'
 		},
 		reader : {
 			type : 'json',
