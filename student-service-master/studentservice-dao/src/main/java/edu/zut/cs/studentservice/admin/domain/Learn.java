@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 import edu.zut.cs.studentservice.base.domain.BaseEntity;
 
-@Table(name = "STUDENTSERVICE_STUDENT")
+@Table(name = "STUDENTSERVICE_LEARN")
 @Entity
 public class Learn extends BaseEntity {
 	private static final long serialVersionUID = -6958160546969152695L;

@@ -1,21 +1,21 @@
-Ext.define('Learn.controller.LearnController', {
+Ext.define('learn.controller.learnController', {
 	extend : 'Ext.app.Controller',
-	alias : 'widget.LearnController',
-	stores : [ 'LearnStore' ],
-	models : [ 'LearnModel' ],
-	views : [ 'LearnGrid', 'LearnEdit' ],
+	alias : 'widget.learnController',
+	stores : [ 'learnStore' ],
+	models : [ 'learnModel' ],
+	views : [ 'learnGrid', 'learnEdit' ],
 	init : function() {
 		this.control({
-			'LearnGrid' : {
+			'learnGrid' : {
 				itemdblclick : this.editLearn
 			},
-			'LearnEdit button[action=save]' : {
+			'learnEdit button[action=save]' : {
 				click : this.updateLearn
 			}
 		});
 	},
 	editLearn : function(grid, record) {
-		var view = Ext.widget('LearnEdit');
+		var view = Ext.widget('learnEdit');
 		view.down('form').loadRecord(record);
 	},
 	updateLearn : function(button) {

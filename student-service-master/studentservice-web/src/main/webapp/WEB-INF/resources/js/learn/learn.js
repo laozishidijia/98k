@@ -6,15 +6,15 @@ Ext.define('learn.learnModel', {
 				type : 'int',
 				sortable : true
 			}, {
-				name : 's_name',
+				name : 'S_name',
 				type : 'string',
 				sortable : true
 			}, {
-				name : 's_time',
+				name : 'S_time',
 				type : 'string',
 				sortable : true
 			}, {
-				name : 's_neirong',
+				name : 'S_neirong',
 				type : 'string',
 				sortable : true
 			}]
@@ -105,7 +105,7 @@ var learnGrid = new Ext.grid.GridPanel({
 			loadMask : true,
 			stripeRows : true,
 			width : 600,
-			title : '学生基本信息列表',
+			title : '四六级资料列表',
 			columns : [ {
 				text : 'ID',
 				width : 50,
@@ -115,17 +115,17 @@ var learnGrid = new Ext.grid.GridPanel({
 				text : "资料名",
 				width : 120,
 				sortable : true,
-				dataIndex : 's_name'
+				dataIndex : 'S_name'
 			}, {
 				text : "发布时间",
 				width : 80,
 				sortable : true,
-				dataIndex : 's_time'
+				dataIndex : 'S_time'
 			}, {
 				text : "资料neir",
 				width : 80,
 				sortable : true,
-				dataIndex : 's_neirong'
+				dataIndex : 'S_neirong'
 			} ],
 			viewConfig : {
 				columnsText : '列',
@@ -185,11 +185,11 @@ var learnForm = new Ext.form.FormPanel({
 			items : [{
 						fieldLabel : "资料名",
 						xtype : 'textfield',
-						name : 's_name'
+						name : 'S_name'
 					}, {
 						fieldLabel : "发布时间",
 						xtype : 'textfield',
-						name : 's_time'
+						name : 'S_time'
 					}],
 			buttons : [{
 						xtype : 'button',
@@ -204,7 +204,7 @@ var learnForm = new Ext.form.FormPanel({
 					}]
 		})
 Ext.application({
-			name : '学生信息',
+			name : '资料信息',
 			launch : function() {
 				Ext.create('Ext.container.Viewport', {
 							layout : 'border',

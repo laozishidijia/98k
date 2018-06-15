@@ -1,11 +1,20 @@
 var pageSize = 20;
 
-var studentStore = Ext.create('student.store.StudentStore');
-Ext.define('student.view.StudentGrid', {
+var learnStore = Ext.create('learn.store.learnStore');
+learnStore.load({
+	callback : function(records, operation, successful) {
+		if (successful) {
+			console.log('department name:', records[0]);
+		} else {
+			console.log('the server reported an error');
+		}
+	}
+});
+Ext.define('learn.view.learnGrid', {
 	extend : 'Ext.grid.GridPanel',
-	alias : 'widget.studentGrid',
+	alias : 'widget.learnGrid',
 	title : '学生列表',
-	store : studentStore,
+	store : learnStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
@@ -35,7 +44,7 @@ Ext.define('student.view.StudentGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : learnStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',

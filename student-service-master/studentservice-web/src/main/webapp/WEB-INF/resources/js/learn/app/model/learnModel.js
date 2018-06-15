@@ -1,4 +1,4 @@
-Ext.define('learn.model.StudentModel', {
+Ext.define('learn.model.learnModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.learnModel',
 	fields : [ {
