@@ -4,6 +4,7 @@ Ext.define('student.model.StudentModel', {
 	fields : [ {
 		name : 'id',
 		type : 'int',
+		
 		sortable : true
 	}, {
 		name : 's_id',
