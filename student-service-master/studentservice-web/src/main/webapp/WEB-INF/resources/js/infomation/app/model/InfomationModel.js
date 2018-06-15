@@ -1,7 +1,4 @@
-/**
- * 
- */
-Ext.define('infomation.model.InfomationtModel', {
+Ext.define('infomation.model.InfomationModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.infomationModel',
 	fields : [ {
@@ -16,15 +13,15 @@ Ext.define('infomation.model.InfomationtModel', {
 		name : 'info_name',
 		type : 'string',
 		sortable : true
-	}, {
-		name : 'info_time',
-		type : 'string',
-		sortable : true
-	}, {
+	},{
+		name:'info_time',
+		type:'string',
+		sortable:true
+	},{
 		name : 'info_message',
 		type : 'string',
 		sortable : true
-	},{
+	}, {
 		name : 'dateCreated',
 		type : 'date',
 		dateFormat : 'time',
@@ -35,5 +32,4 @@ Ext.define('infomation.model.InfomationtModel', {
 		dateFormat : 'time',
 		sortable : true
 	} ]
-
 });

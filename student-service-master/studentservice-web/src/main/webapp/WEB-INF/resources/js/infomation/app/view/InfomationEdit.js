@@ -1,6 +1,3 @@
-/**
- * 
- */
 Ext.define('infomation.view.InfomationEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.infomationEdit',
@@ -15,8 +12,8 @@ Ext.define('infomation.view.InfomationEdit', {
 			border : false,
 			items : [{
 				xtype : 'textfield',
-				name : 'info_id',
-				fieldLabel : '用户编号'
+				name : 'info_message',
+				fieldLabel : '反馈信息'
 			}, {
 				xtype : 'textfield',
 				name : 'info_name',
@@ -25,11 +22,6 @@ Ext.define('infomation.view.InfomationEdit', {
 				xtype : 'textfield',
 				name : 'info_time',
 				fieldLabel : '反馈时间'
-			},
-			{
-				xtype : 'textfield',
-				name : 'info_message',
-				fieldLabel : '反馈信息'
 			}
 			]
 		} ];
@@ -43,5 +35,4 @@ Ext.define('infomation.view.InfomationEdit', {
 		} ];
 		this.callParent(arguments);
 	}
-
 });
