@@ -1,4 +1,4 @@
-Ext.define('goods.view.GoodsEdit', {
+Ext.define('goods.view.goodsEdit', {
 	extend : 'Ext.window.Window',
 	alias : 'widget.goodsEdit',
 	title : '编辑物品信息',

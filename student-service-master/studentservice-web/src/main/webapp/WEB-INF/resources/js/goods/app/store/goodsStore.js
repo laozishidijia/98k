@@ -1,11 +1,11 @@
 var pageSize = 20;
 
-Ext.define('goods.store.GoodsStore', {
+Ext.define('goods.store.goodsStore', {
 	extend : 'Ext.data.Store',
 	alias : 'widget.goodsStore',
 	autoLoad : true,
 	autoSync : true,// 需要同步
-	model : 'goods.model.GoodsModel',
+	model : 'goods.model.goodsModel',
 	proxy : {
 		url : server_context + '/goods/.json',
 		type : 'ajax',
