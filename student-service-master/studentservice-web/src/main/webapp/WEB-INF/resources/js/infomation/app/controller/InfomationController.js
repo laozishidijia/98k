@@ -1,27 +1,24 @@
-/**
- * 
- */
 Ext.define('infomation.controller.InfomationController', {
 	extend : 'Ext.app.Controller',
 	alias : 'widget.infomationController',
 	stores : [ 'InfomationStore' ],
 	models : [ 'InfomationModel' ],
-	views : [ 'InfomationGrid', 'InfomationEdit' ],
+	views : [ 'InfomationGrid','InfomationEdit' ],
 	init : function() {
 		this.control({
 			'infomationGrid' : {
-				itemdblclick : this.editStudent
+				itemdblclick : this.editInfomation
 			},
 			'infomationEdit button[action=save]' : {
-				click : this.updateStudent
+				click : this.updateInfomation
 			}
 		});
 	},
-	editStudent : function(grid, record) {
+	editInfomation : function(grid, record) {
 		var view = Ext.widget('infomationEdit');
 		view.down('form').loadRecord(record);
 	},
-	updateStudent : function(button) {
+	updateInfomation : function(button) {
 		var win = button.up('window');
 		form = win.down('form');
 		record = form.getRecord();
@@ -29,5 +26,4 @@ Ext.define('infomation.controller.InfomationController', {
 		record.set(values);
 		win.close();
 	}
-	
 });

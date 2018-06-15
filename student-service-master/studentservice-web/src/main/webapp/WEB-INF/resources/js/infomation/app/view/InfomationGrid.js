@@ -3,12 +3,18 @@
  */
 var pageSize = 20;
 
-var studentStore = Ext.create('infomation.store.InfomationStore');
+var infomationStore = Ext.create('infomation.store.InfomationStore');
+infomationStore.load({
+	callback : function(records, operation, successful) {
+			console.log('department name:', records);
+
+	}
+});
 Ext.define('infomation.view.InfomationGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.infomationGrid',
 	title : '反馈信息列表',
-	store : studentStore,
+	store : infomationStore,
 	columns : [ {
 		text : 'ID',
 		width : 50,
@@ -55,7 +61,7 @@ Ext.define('infomation.view.InfomationGrid', {
 
 	bbar : new Ext.PagingToolbar({
 		pageSize : pageSize,// 每页显示的记录值
-		store : studentStore,
+		store : infomationStore,
 		displayInfo : true,
 		firstTest : '首页',
 		lastText : '尾页',
@@ -65,6 +71,5 @@ Ext.define('infomation.view.InfomationGrid', {
 		afterPageText : '页，共{0}页',
 		displayMsg : '记录数：第{0}条 - 第{1}条，共 {2}条',
 		emptyMsg : "没有记录"
-	})
-	
+	})	
 });
