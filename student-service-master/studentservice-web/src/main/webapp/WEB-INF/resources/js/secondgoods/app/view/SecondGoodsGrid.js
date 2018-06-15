@@ -1,6 +1,16 @@
 var pageSize = 20;
 
 var secondgoodsStore = Ext.create('secondgoods.store.SecondGoodsStore');
+secondgoodsStore.load({
+	callback : function(records, operation, successful) {
+		if (successful) {
+			console.log('department name:', records[0]);
+		} else {
+			console.log('the server reported an error');
+		}
+	}
+});
+
 Ext.define('secondgoods.view.SecondGoodsGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.secondgoodsGrid',
@@ -14,27 +24,27 @@ Ext.define('secondgoods.view.SecondGoodsGrid', {
 			dataIndex : 'id'
 		}, {
 		text : '二手商品的名称',
-		width : 50,
+		width : 150,
 		sortable : true,
-		dataIndex : 'Sname'
+		dataIndex : 'sname'
 	}, {
 		text : "二手商品的编号",
-		width : 50,
+		width : 150,
 		sortable : true,
-		dataIndex : 'Snumber'
+		dataIndex : 'snumber'
 	}, {
 		text : "二手商品的描述",
 		width : 150,
 		sortable : true,
-		dataIndex : 'Sdescrible',
+		dataIndex : 'sdescrible',
 	}, {
 		text : "二手商品的价格",
-		width : 50,
+		width : 150,
 		sortable : true,
-		dataIndex : 'Sprice',
+		dataIndex : 'sprice',
 	}, {
 		text : "二手商品的使用时间",
-		width : 50,
+		width : 150,
 		sortable : true,
 		dataIndex : 'Stime'
 	}, {

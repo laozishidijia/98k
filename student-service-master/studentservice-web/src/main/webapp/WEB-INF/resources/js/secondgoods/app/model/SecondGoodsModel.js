@@ -7,23 +7,23 @@ Ext.define('secondgoods.model.SecondGoodsModel',{
 			type : 'int',
 			sortable : true
 		},{
-		name : 'Sname',
+		name : 'sname',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'Snumber',
+		name : 'snumber',
 		type : 'long',
 		sortable : true
 	}, {
-		name : 'Sprice',
+		name : 'sprice',
 		type : 'float',
 		sortable : true
 	}, {
-		name : 'Stime',
+		name : 'stime',
 		type : 'float',
 		sortable : true
 	}, {
-		name : 'Sdescrible',
+		name : 'sdescrible',
 		type : 'string',
 		sortable : true
 	}, {
