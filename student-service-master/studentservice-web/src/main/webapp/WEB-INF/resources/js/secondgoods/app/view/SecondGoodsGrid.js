@@ -27,15 +27,11 @@ Ext.define('secondgoods.view.SecondGoodsGrid', {
 		width : 150,
 		sortable : true,
 		dataIndex : 'Sdescrible',
-		editor : textFieldEditor,
-		field : {
-			xtype : 'textfield'
-		}
 	}, {
 		text : "二手商品的价格",
 		width : 50,
 		sortable : true,
-		dataIndex : 'Sprice,
+		dataIndex : 'Sprice',
 	}, {
 		text : "二手商品的使用时间",
 		width : 50,
@@ -63,7 +59,7 @@ Ext.define('secondgoods.view.SecondGoodsGrid', {
 	
 bbar : new Ext.PagingToolbar({
 			pageSize : pageSize,// 每页显示的记录值
-			store : secondgoodsstore,
+			store : secondgoodsStore,
 			displayInfo : true,
 			firstTest : '首页',
 			lastText : '尾页',
@@ -74,5 +70,4 @@ bbar : new Ext.PagingToolbar({
 			displayMsg : '记录数：第{0}条 - 第{1}条，共 {2}条',
 			emptyMsg : "没有记录"
 		})
-}
 });
