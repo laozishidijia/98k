@@ -1,8 +1,14 @@
 Ext.define('secondgoods.model.SecondGoodsModel',{
     extend : 'Ext.data.Model',
 	alias : 'widget.secondgoodsModel',
-	fields : [{name : 'Sname',
-		type : 'String',
+	fields : [
+		{
+			name : 'id',
+			type : 'int',
+			sortable : true
+		},{
+		name : 'Sname',
+		type : 'string',
 		sortable : true
 	}, {
 		name : 'Snumber',

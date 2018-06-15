@@ -1,7 +1,12 @@
 Ext.require(['Ext.data*','Ext.grid*']);
 Ext.define('secondgoods.SecondGoodsModel', {
 	extend : 'Ext.data.Model',
-	fields : [{name : 'Sname',
+	fields : [
+		{
+			name : 'id',
+			type : 'int',
+			sortable : true
+		},{name : 'Sname',
 		type : 'String',
 		sortable : true
 	}, {
@@ -68,7 +73,6 @@ var store = new Ext.data.Store({
 			// 每页显示的记录行数
 			pageSize : pageSize
 		});
-
 var textFieldEditor = {
 	xtype : 'textfield',
 	allowBlank : false,
@@ -78,6 +82,25 @@ var textFieldEditor = {
 	maxLength : 20,
 	maxText : '最多输入{0}个字符！'
 }
+var genderFieldEditor = {
+		xtype : 'combo',
+		triggerAction : 'all',
+		forceSelection : true,
+		displayField : 'label',
+		valueField : 'id',
+		mode : 'local',
+		store : {
+			xtype : 'jsonstore',
+			fields : ['id', 'label'],
+			data : [{
+						id : '男',
+						label : '男'
+					}, {
+						id : '女',
+						label : '女'
+					}]
+		}
+	}
 var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 	listeners : {
 		cancelEdit : function(rowEditing, context) {
@@ -100,7 +123,13 @@ var secondGrid = new Ext.grid.GridPanel({
 	stripeRows : true,
 	width : 600,
 	title : '二手物品基本信息列表',
-	columns : [{
+	columns : [
+		{
+			text : 'ID',
+			width : 50,
+			sortable : true,
+			dataIndex : 'id'
+		},{
 				text : '二手商品的名称',
 				width : 50,
 				sortable : true,
@@ -123,7 +152,7 @@ var secondGrid = new Ext.grid.GridPanel({
 				text : "二手商品的价格",
 				width : 50,
 				sortable : true,
-				dataIndex : 'Sprice,
+				dataIndex : 'Sprice',
 			}, {
 				text : "二手商品的使用时间",
 				width : 50,
@@ -168,9 +197,9 @@ var secondGrid = new Ext.grid.GridPanel({
 	}
 });
 
-goodsGrid.getSelectionModel().on('selectionchange',
+secondgoodsGrid.getSelectionModel().on('selectionchange',
 function(selModel, selections) {
-	goodsGrid.down('#delete').setDisabled(selections.length === 0);
+	secondgoodsGrid.down('#delete').setDisabled(selections.length === 0);
 });
 
 new Ext.form.NumberField({
@@ -183,13 +212,13 @@ allowNegative : false
 
 var clearForm = function() {
 Ext.Msg.alert('重置', '重置查询表单！');
-studentForm.getForm().reset();
+secondgoodsForm.getForm().reset();
 }
 
 var queryForm = function() {
 Ext.Msg.alert('查询', '将开始执行查询！');
 }
-var goodsForm = new Ext.form.FormPanel({
+var secondgoodsForm = new Ext.form.FormPanel({
 	title : '信息查询',
 	width : 200,
 	height : 200,
@@ -198,17 +227,17 @@ var goodsForm = new Ext.form.FormPanel({
 	defaultType : 'textfiled',
 	labelWidth : 30,
 	items : [{
-				fieldLabel : "序号",
+				fieldLabel : "二手商品名称",
 				xtype : 'textfield',
-				name : 'itemsid'
+				name : 'Sname'
 			}, {
-				fieldLabel : "物品名",
+				fieldLabel : "二手商品编号",
 				xtype : 'textfield',
-				name : 'itemsname'
+				name : 'Snumber'
 			}, {
-				fieldLabel : "数量",
+				fieldLabel : "二手商品价格",
 				xtype : 'textfield',
-				name : 'itemsnumber'
+				name : 'Sprice'
 			}],
 	buttons : [{
 				xtype : 'button',
@@ -224,11 +253,11 @@ var goodsForm = new Ext.form.FormPanel({
 })
 
 Ext.application({
-	name : '物品信息',
+	name : '二手商品信息',
 	launch : function() {
 		Ext.create('Ext.container.Viewport', {
 					layout : 'border',
-					items : [goodsForm, goodsGrid]
+					items : [secondgoodsForm, secondgoodsGrid]
 				});
 	}
 });

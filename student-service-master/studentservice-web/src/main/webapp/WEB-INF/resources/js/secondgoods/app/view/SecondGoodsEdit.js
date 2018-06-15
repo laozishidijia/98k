@@ -32,8 +32,7 @@ Ext.define('secondgoods.view.SecondGoodsEdit', {
 				xtype : 'textfield',
 				name : 'Sdescrible',
 				fieldLabel : '二手商品的描述'
-			}
-			]
+			}]
 		} ];
 		this.buttons = [ {
 			text : '保存',

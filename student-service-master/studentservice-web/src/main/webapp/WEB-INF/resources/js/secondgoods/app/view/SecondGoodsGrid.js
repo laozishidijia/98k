@@ -4,9 +4,15 @@ var secondgoodsStore = Ext.create('secondgoods.store.SecondGoodsStore');
 Ext.define('secondgoods.view.SecondGoodsGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.secondgoodsGrid',
-	title : '二手商品物品列表',
+	title : '二手商品列表',
 	store : secondgoodsStore,
-	columns : [{
+	columns : [
+		{
+			text : 'ID',
+			width : 50,
+			sortable : true,
+			dataIndex : 'id'
+		}, {
 		text : '二手商品的名称',
 		width : 50,
 		sortable : true,
@@ -48,16 +54,13 @@ Ext.define('secondgoods.view.SecondGoodsGrid', {
 		renderer : Ext.util.Format.dateRenderer('Y/m/d H:i:s'),
 		sortable : true
 	}],
-viewConfig : {
-columnsText : '列',
-sortAscText : '升序',
-sortDescText : '降序'
-},
-tbar : {
-xtype : 'toolbar',
-frame : true,
-border : false,
-padding : 2,
+	viewConfig : {
+	columnsText : '列',
+	sortAscText : '升序',
+	sortDescText : '降序'
+	},
+
+	
 bbar : new Ext.PagingToolbar({
 			pageSize : pageSize,// 每页显示的记录值
 			store : secondgoodsstore,
