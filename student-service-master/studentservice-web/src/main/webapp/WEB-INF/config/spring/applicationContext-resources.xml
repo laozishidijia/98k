@@ -68,7 +68,6 @@
 
     <bean id="sessionFactory" factory-bean="entityManagerFactory"
           factory-method="getSessionFactory"/>
-
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
