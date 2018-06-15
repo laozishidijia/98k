@@ -1,4 +1,4 @@
-Ext.define('goods.model.GoodsModel', {
+Ext.define('goods.model.goodsModel', {
 	extend : 'Ext.data.Model',
 	alias : 'widget.goodsModel',
 	fields : [{name : 'id',

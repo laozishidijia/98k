@@ -1,23 +1,23 @@
 Ext.require(['Ext.data*','Ext.grid*']);
-Ext.define('goods.GoodsModel', {
+Ext.define('goods.goodsModel', {
 	extend : 'Ext.data.Model',
 	fields : [{name : 'id',
 		type : 'int',
 		sortable : true
 	}, {
-		name : 'Itemsdescribe',
+		name : 'ItemsDescribe',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'itemsid',
+		name : 'itemsId',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'itemsname',
+		name : 'itemsName',
 		type : 'string',
 		sortable : true
 	}, {
-		name : 'itemsnumber',
+		name : 'itemsNumber',
 		type : 'string',
 		sortable : true
 	}, {
@@ -38,7 +38,7 @@ var pageSize = 20;
 var store = new Ext.data.Store({
 			autoLoad : true,
 			autoSync : true,// 需要同步
-			model : 'goods.GoodsModel',
+			model : 'goods.goodsModel',
 			proxy : {
 				type : 'rest',
 				url : './.json',
@@ -90,7 +90,7 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
 	}
 });
 
-var studentGrid = new Ext.grid.GridPanel({
+var goodGrid = new Ext.grid.GridPanel({
 	id : 'goodsGrid',
 	plugins : [rowEditing],
 	store : store,
@@ -109,7 +109,7 @@ var studentGrid = new Ext.grid.GridPanel({
 				text : "物品描述",
 				width : 120,
 				sortable : true,
-				dataIndex : 'Itemsdescribe',
+				dataIndex : 'ItemsDescribe',
 				editor : textFieldEditor,
 				field : {
 					xtype : 'textfield'
@@ -118,7 +118,7 @@ var studentGrid = new Ext.grid.GridPanel({
 				text : "编号",
 				width : 80,
 				sortable : true,
-				dataIndex : 'itemsid',
+				dataIndex : 'itemsId',
 				editor : textFieldEditor,
 				field : {
 					xtype : 'textfield'
@@ -127,14 +127,14 @@ var studentGrid = new Ext.grid.GridPanel({
 				text : "名称",
 				width : 50,
 				sortable : true,
-				dataIndex : 'itemsname',
+				dataIndex : 'itemsName',
 				editor : genderFieldEditor
 			}, {
 				text : "数量",
 				width : 50,
 				sortable : true,
 				editor : textFieldEditor,
-				dataIndex : 'itemsnumber'
+				dataIndex : 'itemsNumber'
 			}, {
 				text : "添加时间",
 				width : 150,
@@ -189,7 +189,7 @@ allowNegative : false
 
 var clearForm = function() {
 Ext.Msg.alert('重置', '重置查询表单！');
-studentForm.getForm().reset();
+goodsForm.getForm().reset();
 }
 
 var queryForm = function() {
@@ -206,15 +206,15 @@ var goodsForm = new Ext.form.FormPanel({
 	items : [{
 				fieldLabel : "序号",
 				xtype : 'textfield',
-				name : 'itemsid'
+				name : 'itemsId'
 			}, {
 				fieldLabel : "物品名",
 				xtype : 'textfield',
-				name : 'itemsname'
+				name : 'itemsName'
 			}, {
 				fieldLabel : "数量",
 				xtype : 'textfield',
-				name : 'itemsnumber'
+				name : 'itemsNumber'
 			}],
 	buttons : [{
 				xtype : 'button',

@@ -13,17 +13,20 @@ import edu.zut.cs.studentservice.base.web.spring.controller.GenericController;
 @RequestMapping("/goods")
 public class GoodsContorller extends GenericController<Goods, Long, GoodsManager>{
 	GoodsManager goodsManager;
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
+	public String index() {
+		String result = "/goods/index";
+		return result;
+	}
+	
 	@Autowired
 	public void setCourseManager(GoodsManager goodsManager) {
 		this.goodsManager=goodsManager;
 		this.manager=this.goodsManager;
 		
 	}
-	@RequestMapping(method = RequestMethod.GET, value = "/index.html")
-	public String index() {
-		String result = "/goods/index";
-		return result;
-	}
+	
 
 	
 

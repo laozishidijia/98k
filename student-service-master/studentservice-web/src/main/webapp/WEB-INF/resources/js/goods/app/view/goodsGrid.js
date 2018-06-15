@@ -1,7 +1,19 @@
 var pageSize = 20;
 
-var goodsStore = Ext.create('goods.store.GoodsStore');
-Ext.define('goods.view.GoodsGrid', {
+var goodsStore = Ext.create('goods.store.goodsStore');
+
+goodsStore.load({
+	callback : function(records, operation, successful) {
+		if (successful) {
+			console.log('department name:', records[0]);
+		} else {
+			console.log('the server reported an error');
+		}
+	}
+});
+
+
+Ext.define('goods.view.goodsGrid', {
 	extend : 'Ext.grid.GridPanel',
 	alias : 'widget.goodsGrid',
 	title : '物品列表',
@@ -16,7 +28,6 @@ Ext.define('goods.view.GoodsGrid', {
 		width : 120,
 		sortable : true,
 		dataIndex : 'Itemsdescribe',
-		editor : textFieldEditor,
 		field : {
 			xtype : 'textfield'
 		}
@@ -25,7 +36,6 @@ Ext.define('goods.view.GoodsGrid', {
 		width : 80,
 		sortable : true,
 		dataIndex : 'itemsid',
-		editor : textFieldEditor,
 		field : {
 			xtype : 'textfield'
 		}
@@ -34,12 +44,10 @@ Ext.define('goods.view.GoodsGrid', {
 		width : 50,
 		sortable : true,
 		dataIndex : 'itemsname',
-		editor : genderFieldEditor
 	}, {
 		text : "数量",
 		width : 50,
 		sortable : true,
-		editor : textFieldEditor,
 		dataIndex : 'itemsnumber'
 	}, {
 		text : "添加时间",
@@ -66,7 +74,7 @@ border : false,
 padding : 2,
 bbar : new Ext.PagingToolbar({
 			pageSize : pageSize,// 每页显示的记录值
-			store : store,
+			store : goodsStore,
 			displayInfo : true,
 			firstTest : '首页',
 			lastText : '尾页',

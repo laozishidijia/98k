@@ -1,9 +1,9 @@
 Ext.define('goods.controller.GoodsController', {
 	extend : 'Ext.app.Controller',
-	alias : 'widget.goodsController',
-	stores : [ 'GoodsStore' ],
-	models : [ 'GoodsModel' ],
-	views : [ 'GoodsGrid', 'GoodsEdit' ],
+	alias : 'widget.GoodsController',
+	stores : [ 'goodsStore' ],
+	models : [ 'goodsModel' ],
+	views : [ 'goodsGrid','goodsEdit'],
 	init : function() {
 		this.control({
 			'goodsGrid' : {

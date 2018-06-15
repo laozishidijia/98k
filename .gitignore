@@ -1,0 +1,17 @@
+/student-service-master/.settings
+/student-service-master/*.project
+/student-service-master/studentservice-base/.settings
+/student-service-master/studentservice-base/*.classpath
+/student-service-master/studentservice-base/*.project
+/student-service-master/studentservice-client/.settings
+/student-service-master/studentservice-client/*.classpath
+/student-service-master/studentservice-client/*.project
+/student-service-master/studentservice-dao/.settings
+/student-service-master/studentservice-dao/*.classpath
+/student-service-master/studentservice-dao/*.project
+/student-service-master/studentservice-service/.settings
+/student-service-master/studentservice-service/*.classpath
+/student-service-master/studentservice-service/*.project
+/student-service-master/studentservice-web/.settings
+/student-service-master/studentservice-web/*.classpath
+/student-service-master/studentservice-web/*.project
