@@ -9,7 +9,9 @@ import edu.zut.cs.studentservice.admin.domain.Learn;
 import edu.zut.cs.studentservice.admin.domain.Student;
 import edu.zut.cs.studentservice.admin.service.LearnManager;
 import edu.zut.cs.studentservice.base.service.GenericGenerator;
-
+/**
+ * 四六级实现测试类
+ * */
 public class LearnManagerImplTest extends GenericGenerator {
 	@Autowired
 	LearnManager LearnManager;

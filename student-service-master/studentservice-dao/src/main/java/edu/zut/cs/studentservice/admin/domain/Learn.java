@@ -8,6 +8,9 @@ import edu.zut.cs.studentservice.base.domain.BaseEntity;
 
 @Table(name = "STUDENTSERVICE_LEARN")
 @Entity
+/**
+ * 构建四六级资料实体
+*/
 public class Learn extends BaseEntity {
 	private static final long serialVersionUID = -6958160546969152695L;
 	private String S_name;

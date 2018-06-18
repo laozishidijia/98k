@@ -11,6 +11,9 @@ import edu.zut.cs.studentservice.base.web.spring.controller.GenericController;
 
 @Controller
 @RequestMapping("/learn")
+/**
+ * 建立四六级信息映射关系
+ * */
 public class LearnContorller extends GenericController<Learn, Long, LearnManager>{
 	LearnManager learnManager;
 	@Autowired
